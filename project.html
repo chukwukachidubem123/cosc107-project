@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Give away</title>
+    <link rel="stylesheet" href="project.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <img class="img-iphone" srcset="iphone.jpg.jpg" alt="iphone">
+        <div class="text-box">
+            <h1 class="text-tox">OLD IPHONE GIVEAWAY</h1>
+            <h2 class="text-fox">Giveaway ends on wednesday, 5 March 2024 At <br>11:30am</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit molestiae cum libero atque ut voluptate qui consectetur aliquid incidunt voluptatem quos, dolore, non commodi quaerat aliquam eligendi, quisquam totam blanditiis.</p>
+            </div>
+            </div>
+        </div>
+       
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .countdown-box {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px;
+                background-color: #063251;
+                color: white;
+                border-radius: 10px;
+            }
+            .timer {
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+        
+        <div class="countdown-box">
+            <div id="days" class="timer">00</div>
+            <div class="timer-label">Days</div>
+        </div>
+        
+        <div class="countdown-box">
+            <div id="hours" class="timer">00</div>
+            <div class="timer-label">Hours</div>
+        </div>
+        
+        <div class="countdown-box">
+            <div id="minutes" class="timer">00</div>
+            <div class="timer-label">Min</div>
+        </div>
+        
+        <div class="countdown-box">
+            <div id="seconds" class="timer">00</div>
+            <div class="timer-label">Secs</div>
+        </div>
+        
+        <script>
+            
+            var countDownDate = new Date("March 5, 2024 00:11:30").getTime();
+        
+            
+            var x = setInterval(function() {
+        
+                
+                var now = new Date().getTime();
+                
+                
+                var distance = countDownDate - now;
+                
+                
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                
+                document.getElementById("days").innerHTML =  formatTime(days);
+                document.getElementById("hours").innerHTML = formatTime(hours);
+                document.getElementById("minutes").innerHTML = formatTime(minutes);
+                document.getElementById("seconds").innerHTML = formatTime(seconds);
+                
+                
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("timer").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+
+            function formatTime(time){
+                return time <10 ? "0" + time : time;
+            }
+        </script>
+        
+    </body>
+    
+    </body>
+</html>

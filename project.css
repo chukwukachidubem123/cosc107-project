@@ -1,0 +1,35 @@
+.img-iphone {
+    border-radius: 10px;
+    display: block;
+    width: 550px;
+    height: 370px;
+    margin-left: 22px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    float: left;
+    margin-right: 15px;
+    margin-right: 40PX;
+}
+.text-box {
+    padding-top: 90px;
+    padding-right: 100PX;
+    font-size: 16px;
+    color: #102A42;
+    font: roboto, sans-serif;
+}
+.text-tox {
+    color: #0B64A4;
+    font-size: 28PX;
+    font: roboto, sans-serif;
+    text-align: left;
+}
+body {
+    background-color: rgb(203, 218, 237);
+}
+.text-fox {
+    font-size: 20px;
+}
+@media  screen and(max-width:600px) {
+    
+    
+}
